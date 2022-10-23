@@ -1,0 +1,37 @@
+{% extends "bootstrap/base.html" %}
+{% include "navbar.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+
+<!-- Header-->
+<header>
+  <div style="background-color:#8FC0A9">
+    <div class="container px-4 px-lg-5 my-5">
+      <div class="text-center text-white">
+        <h1 class="display-5 fw-bolder">REGISTER</h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+      </div>
+    </div>
+  </div>
+
+
+
+<footer>
+  <div style="background-color:#8FC0A9">
+     <div class="container px-4 px-lg-5 my-5">
+      <p class="m-0 text-center text-white">Copyright &copy; Jhuv's Planner 2022</p>
+    </div>
+  </div>
+</footer>
+
+
+{% endblock content %}
